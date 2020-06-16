@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 <div class="sidebar" data-color="orange" data-background-color="white" data-image="{{ asset('material') }}/img/sidebar-1.jpg">
     <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
@@ -16,13 +13,13 @@
         <ul class="nav">
         <li class="nav-item dashboard">
             <a class="nav-link" href="{{ route('home') }}">
-            <i class="material-icons">dashboard</i>
+            <i class="material-icons"></i>
                 <p>{{ __('Dashboard') }}</p>
             </a>
         </li>
         <li class="nav-item active">
             <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-            <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
+            <i><img style="width:25px" src="{{ asset('resources/img/laravel.svg') }}"></i>
             <p>{{ __('Laravel Examples') }}
                 <b class="caret"></b>
             </p>
@@ -46,7 +43,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link">
-            <i class="material-icons">content_paste</i>
+            <i class="material-icons"></i>
                 <p>{{ __('Table List') }}</p>
             </a>
         </li>
