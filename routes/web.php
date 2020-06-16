@@ -20,3 +20,4 @@ Route::resource('products', 'productController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/pedidos', 'PedidosController@index')->name('pedido');
