@@ -17,34 +17,10 @@
                 <p>{{ __('Dashboard') }}</p>
             </a>
         </li>
-        <li class="nav-item active">
-            <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-            <i><img style="width:25px" src="{{ asset('resources/img/laravel.svg') }}"></i>
-            <p>{{ __('Laravel Examples') }}
-                <b class="caret"></b>
-            </p>
-            </a>
-            <div class="collapse show" id="laravelExample">
-            <ul class="nav">
-                <li class="nav-item">
-                <a class="nav-link">
-                    <span class="sidebar-mini"> UP </span>
-                    <span class="sidebar-normal">{{ __('User profile') }} </span>
-                </a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link">
-                    <span class="sidebar-mini"> UM </span>
-                    <span class="sidebar-normal"> {{ __('User Management') }} </span>
-                </a>
-                </li>
-            </ul>
-            </div>
-        </li>
         <li class="nav-item">
-            <a class="nav-link">
+            <a class="nav-link" href="{{ route('pedido') }}">
             <i class="material-icons"></i>
-                <p>{{ __('Table List') }}</p>
+                <p>{{ __('Pedidos') }}</p>
             </a>
         </li>
         </ul>

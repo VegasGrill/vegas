@@ -23,6 +23,6 @@ class PedidosController extends Controller
      */
     public function index()
     {
-        return view('layouts.pages.pedidos');
+        return view('pages.pedidos');
     }
 }

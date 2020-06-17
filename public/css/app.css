@@ -653,8 +653,6 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .no-gutters {
@@ -4529,18 +4527,14 @@ input[type=button].btn-block {
 }
 
 .navbar {
+    top: 0;
+    z-index: 2;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-}
-
-@media screen and (min-width: 991px) {
-    .navbar {
-        margin-left: 260px;
-    }
 }
 .navbar .container,
 .navbar .container-fluid,
@@ -12145,17 +12139,6 @@ a.text-dark:focus {
       margin: 0;
     }
   }
-
-  @media (min-width: 992px) {
-    .main-panel .navbar .navbar-collapse .navbar-nav .nav-item .nav-link p {
-      display: none;
-    }
-    .nav-mobile-menu,
-    .sidebar .navbar-form {
-      display: none !important;
-    }
-  }
-
   .off-canvas-sidebar .navbar-collapse:after {
     background-color: #282828;
   }
@@ -12186,7 +12169,6 @@ a.text-dark:focus {
   }
 
   .main-panel>.content {
-    margin-top: 70px;
     padding: 30px 15px;
     min-height: calc(100vh - 123px);
   }
