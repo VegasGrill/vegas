@@ -21,3 +21,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/pedidos', 'PedidosController@index')->name('pedido');
+
+/*Route::get('/pedido', function () {
+    $tasks = Task::orderBy('created_at', 'asc')->get();
+
+    return view('tasks', [
+        'tasks' => $tasks
+    ]);
+});
+*/
