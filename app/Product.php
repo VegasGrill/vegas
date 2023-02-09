@@ -8,7 +8,7 @@ class Product extends Model
 {
 
 
-protected $fillable = ['proname','procategory','provalue'];
+    protected $fillable = ['proname','procategory','provalue'];
 
 
     public function up(){

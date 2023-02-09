@@ -653,8 +653,6 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .no-gutters {
@@ -4529,18 +4527,14 @@ input[type=button].btn-block {
 }
 
 .navbar {
+    top: 0;
+    z-index: 2;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem;
-}
-
-@media screen and (min-width: 991px) {
-    .navbar {
-        margin-left: 250px;
-    }
 }
 .navbar .container,
 .navbar .container-fluid,
@@ -12145,17 +12139,6 @@ a.text-dark:focus {
       margin: 0;
     }
   }
-
-  @media (min-width: 992px) {
-    .main-panel .navbar .navbar-collapse .navbar-nav .nav-item .nav-link p {
-      display: none;
-    }
-    .nav-mobile-menu,
-    .sidebar .navbar-form {
-      display: none !important;
-    }
-  }
-
   .off-canvas-sidebar .navbar-collapse:after {
     background-color: #282828;
   }
@@ -12175,3 +12158,62 @@ a.text-dark:focus {
       list-style: none;
   }
 /**/
+}
+
+
+.main-panel {
+    position: relative;
+    float: right;
+    width: calc(100% - 260px);
+    transition: 0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1);
+  }
+
+  .main-panel>.content {
+    padding: 30px 15px;
+    min-height: calc(100vh - 123px);
+  }
+
+  .main-panel>.footer {
+    border-top: 1px solid #e7e7e7;
+  }
+
+  .main-panel>.navbar {
+    margin-bottom: 0;
+  }
+
+  .main-panel .header {
+    margin-bottom: 30px;
+  }
+
+  .main-panel .header .title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .perfect-scrollbar-on .sidebar,
+  .perfect-scrollbar-on .main-panel {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .sidebar,
+  .main-panel,
+  .sidebar-wrapper {
+    -webkit-transition-property: top, bottom, width;
+    transition-property: top, bottom, width;
+    -webkit-transition-duration: .2s, .2s, .35s;
+    transition-duration: .2s, .2s, .35s;
+    -webkit-transition-timing-function: linear, linear, ease;
+    transition-timing-function: linear, linear, ease;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  @media (min-width: 992px) {
+    .main-panel .navbar .navbar-collapse .navbar-nav .nav-item .nav-link p {
+      display: none;
+    }
+    .nav-mobile-menu,
+    .sidebar .navbar-form {
+      display: none !important;
+    }
+  }
